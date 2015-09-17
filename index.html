@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Boilerplate</title>
+  <!-- styles -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/main.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    <div class="container">
+      <div ng-controller="myController" ng-model="initialText">
+        <h1>Say something</h1>
+        <br>
+        <input type="text" ng-model="greeting"></p>
+        <p>Unaltered Greeting {{ greeting }}</p>
+        <p>Test Kebab {{ greeting | kebab }}</p>
+        <p>Test camelCase {{ greeting | camel }}</p>
+        <p>Test PigLatin {{ greeting | pigLatin }}</p>
+
+        <h4>Redacted</h4>
+        <input type="text" ng-model="text">
+        <p>Redacted word {{ text | redact: "text"}}</p>
+        <p>Redact - "My dog Rusty is adorable" = My dog {{"Rusty"| redact: "Rusty"}} is adorable.</p>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src ='//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js'></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="js/directives.js" type="text/javascript"></script>
+    <script src="js/filters.js" type="text/javascript"></script>
+    <script src="js/services.js" type="text/javascript"></script>
+  </body>
+</html>
